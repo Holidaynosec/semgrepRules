@@ -1,3 +1,4 @@
+``` YAML
 rules:
   - id: generic-sensitive-data-leak-in-api-response
     message: "检测到API响应可能泄露敏感数据。请确保在将数据返回给客户端之前，已移除所有敏感信息。"
@@ -43,3 +44,4 @@ rules:
         - pattern: |
             _.omit($SOURCE, ...)
         - pattern: JSON.parse(JSON.stringify($SOURCE)) # 深度拷贝
+```
